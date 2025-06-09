@@ -1,0 +1,125 @@
+ Getting to Know a Dataset
+
+What's the best way to approach a new dataset? Learn to validate and summarize categorical and numerical data and create Seaborn visualizations to communicate your findings.
+Initial exploration
+50 XP
+Functions for initial exploration
+100 XP
+Counting categorical values
+100 XP
+Global unemployment in 2021
+Review
+70 XP
+Data validation
+50 XP
+Detecting data types
+100 XP
+Validating continents
+100 XP
+Validating range
+100 XP
+Data summarization
+50 XP
+Summaries with .groupby() and .agg()
+100 XP
+Named aggregations
+100 XP
+Visualizing categorical summaries
+100 XP
+
+
+2
+Data Cleaning and Imputation
+Locked
+
+0%
+Exploring and analyzing data often means dealing with missing values, incorrect data types, and outliers. In this chapter, you’ll learn techniques to handle these issues and streamline your EDA processes!
+Addressing missing data
+50 XP
+Dealing with missing data
+100 XP
+Strategies for remaining missing data
+100 XP
+Imputing missing plane prices
+100 XP
+Converting and analyzing categorical data
+50 XP
+Finding the number of unique values
+100 XP
+Flight duration categories
+100 XP
+Adding duration categories
+100 XP
+Working with numeric data
+50 XP
+Flight duration
+100 XP
+Adding descriptive statistics
+100 XP
+Handling outliers
+50 XP
+What to do with outliers
+100 XP
+Identifying outliers
+100 XP
+Removing outliers
+100 XP
+
+
+3
+Relationships in Data
+Locked
+
+0%
+Variables in datasets don't exist in a vacuum; they have relationships with each other. In this chapter, you'll look at relationships across numerical, categorical, and even DateTime data, exploring the direction and strength of these relationships as well as ways to visualize them.
+Patterns over time
+50 XP
+Importing DateTime data
+100 XP
+Updating data type to DateTime
+100 XP
+Visualizing relationships over time
+100 XP
+Correlation
+50 XP
+Interpreting a heatmap
+50 XP
+Visualizing variable relationships
+100 XP
+Visualizing multiple variable relationships
+100 XP
+Factor relationships and distributions
+50 XP
+Categorical data in scatter plots
+100 XP
+Exploring with KDE plots
+100 XP
+
+
+4
+Turning Exploratory Analysis into Action
+Locked
+
+0%
+Exploratory data analysis is a crucial step in the data science workflow, but it isn't the end! Now it's time to learn techniques and considerations you can use to successfully move forward with your projects after you've finished exploring!
+Considerations for categorical data
+50 XP
+Checking for class imbalance
+100 XP
+Cross-tabulation
+100 XP
+Generating new features
+50 XP
+Extracting features for correlation
+100 XP
+Calculating salary percentiles
+100 XP
+Categorizing salaries
+100 XP
+Generating hypotheses
+50 XP
+Comparing salaries
+100 XP
+Choosing a hypothesis
+100 XP
+Congratulations
