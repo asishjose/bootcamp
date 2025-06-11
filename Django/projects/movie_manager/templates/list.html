@@ -1,20 +1,30 @@
-<h1>list</h1>
+
 
 {% include 'menu.html' %}
 {% load static %}
 
 {% block content %}
 
+<h1>List Movies</h1>
+<table>
+    <tr><th>title</th><th>description</th><th>year</th></tr>
+
 {% for movie_obj in movies%}
-<h1>Title: {{movie_obj.title | upper}}</h1>
+<tr>
+    <td> <h1>Title: {{movie_obj.title | upper}}</h1> </td>
+
+<td> <p>Summary: {{movie_obj.description | default:'No data available.'}}</p> </td>
 <!-- <img src="{% static 'images/' %}{{ movie_obj.img }}" alt=""> -->
-<p>Summary: {{movie_obj.description | default:'No data available.'}}</p>
-<h4>Year: {{movie_obj.year}}</h4>
+<td> <h4>Year: {{movie_obj.year}}</h4> </td>
+
+</tr>
+{% endfor %}
+</table>
 <!-- {% if movie_obj.success %}
 <p>Movie was a success at that time</p>
 {% else %}
 <p>Movie was a failure</p>
 {% endif %} -->
-{% endfor %}
+
 
 {% endblock %}
