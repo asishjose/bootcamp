@@ -6,11 +6,11 @@
 
 {% block content %}
 
-<form action="", method="'post", enctype="multipart/form-data">
+<form method="post", enctype="multipart/form-data">
     {% csrf_token %}
-    Title: <input type="text", name="title">
-    Year: <input type="text", name="year">
-    summary: <input type="text", name="summary">
+    Title: <input type="text", name="title"/>
+    Year: <input type="text", name="year"/>
+    summary: <input type="text", name="summary"/>
     <button type="submit">create</button>
 </form>
 
