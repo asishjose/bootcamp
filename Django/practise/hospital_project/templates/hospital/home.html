@@ -1,0 +1,64 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Management</title>
+</head>
+<body>
+    <h1>Hospital Management System</h1>
+    <nav>
+        <a href="/">Home</a> | 
+        <a href="/doctors/">Doctors</a> | 
+        <a href="/patients/">Patients</a>
+    </nav>
+    <p>Welcome to our hospital management system!</p>
+</body>
+</html>
+
+<!-- doctor_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctors</title>
+</head>
+<body>
+    <h1>Our Doctors</h1>
+    <nav>
+        <a href="/">Home</a> | 
+        <a href="/doctors/">Doctors</a> | 
+        <a href="/patients/">Patients</a>
+    </nav>
+    
+    <ul>
+        {% for doctor in doctors %}
+            <li>{{ doctor.name }} - {{ doctor.specialization }}</li>
+        {% empty %}
+            <li>No doctors available</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+<!-- patient_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patients</title>
+</head>
+<body>
+    <h1>Our Patients</h1>
+    <nav>
+        <a href="/">Home</a> | 
+        <a href="/doctors/">Doctors</a> | 
+        <a href="/patients/">Patients</a>
+    </nav>
+    
+    <ul>
+        {% for patient in patients %}
+            <li>{{ patient.name }} (Age: {{ patient.age }}) - Doctor: {{ patient.doctor.name }}</li>
+        {% empty %}
+            <li>No patients registered</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
