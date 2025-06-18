@@ -1,0 +1,21 @@
+{% extends 'family/base.html' %}
+
+{% block content %}
+
+<h3>Members List</h3>
+
+<ul>
+    {%  for member in members %}
+        <li>
+            <a href="{% url 'delete' member.id %}">❌</a>
+            <a href="{% url 'edit' member.id %}">✏️</a>
+            {{member.name}} is {{member.age}}Yrs old.
+        </li>
+
+    {% empty %}
+    <p>No members...</p>
+
+    {% endfor %}
+</ul>
+
+{% endblock %}
