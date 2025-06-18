@@ -1,0 +1,22 @@
+{% extends "family/base.html" %}
+
+
+{% block content %}
+<h2>Add Family Member</h2>
+<form method='POST'>
+    {%  csrf_token %}
+    <label for="name">Name:</label><br>
+    <input type="text" name="name"><br><br>
+
+    <label for="age">Age:</label><br>
+    <input type="text" name="age"><br><br>
+
+    <label for="housename">HouseName:</label><br>
+    <input type="text" name="housename"><br><br>
+
+    <label for="contact">Contact:</label><br>
+    <input type="text" name="contact"><br><br>
+    
+    <button type="submit">Save</button>
+</form>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "family/base.html" %}
+
+{% block content %}
+<h2>Members List With Details🛗</h2>
+
+{%  if members %}
+    <ul>
+        {% for member in members %}
+            <li>{{member.name}}, {{member.age}}yrs, {{member.housename}}, {{member.contact}}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No family members added yet</p>
+{% endif %}
+
+<a href="/add/">➕ Add new member</a>
+<a href="/edit_list/">📝 Modify List</a>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'family/base.html' %}
+
+{% block content %}
+<h2>Edit {{ member.name }}</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <p>
+        <label>Name:</label>
+        <input type="text" name="name" value="{{ member.name }}" required>
+    </p>
+    <p>
+        <label>Age:</label>
+        <input type="number" name="age" value="{{ member.age }}" required>
+    </p>
+    <p>
+        <label>House Name:</label>
+        <input type="text" name="housename" value="{{ member.housename }}" required>
+    </p>
+    <p>
+        <label>Contact:</label>
+        <input type="text" name="contact" value="{{ member.contact }}" required>
+    </p>
+    <button type="submit">Update Member</button>
+</form>
+
+<a href="{% url 'edit_list' %}">← Back to Edit List</a>
+{% endblock %}
