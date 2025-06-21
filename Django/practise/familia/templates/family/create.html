@@ -7,11 +7,13 @@
 <form method="POST">
     {% csrf_token %}
 
-    <label for="name">Name:</label><br>
-    <input type="text" name="name" id="name"><br><br>
+    <!-- <label for="name">Name:</label><br>
+    <input type="text" name="name" id="name" required><br><br>
 
     <label for="age">Age:</label><br>
-    <input type="number" name="age" id="age"><br><br>
+    <input type="number" name="age" id="age" required><br><br> -->
+
+    {{ frm.as_p }}
 
     <button type="submit">Add Member</button>
 </form>

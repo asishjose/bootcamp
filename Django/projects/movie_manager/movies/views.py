@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 #from django.http import HttpResponse
 from . models import MovieInfo
 from . forms import MovieForm
@@ -17,9 +17,10 @@ def create(request):
         # movie_obj=MovieInfo(title=title, year=year, description=desc)
         # movie_obj.save()
 
-        frm=MovieForm(request.POST)
+        frm=MovieForm(request.POST, request.FILES)
         if frm.is_valid():
             frm.save()
+            return redirect('list')
         else:
             frm=MovieForm()
 
@@ -41,9 +42,10 @@ def edit(request,pk):
         # instance_to_be_edited.year=year
         # instance_to_be_edited.description=description
         # instance_to_be_edited.save()
-        frm=MovieForm(request.POST, instance=instance_to_be_edited)
+        frm=MovieForm(request.POST,request.FILES, instance=instance_to_be_edited)
         if frm.is_valid():
             instance_to_be_edited.save()
+            return redirect('list')
     else:
         frm=MovieForm(instance=instance_to_be_edited)
         
