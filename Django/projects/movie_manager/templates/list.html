@@ -5,7 +5,12 @@
 
 {% block content %}
 
-<h1>List Movies</h1>
+<!-- Recent Movies -->
+{% for movie_obj in recent_movies %}
+<p>{{  movie_obj.title | upper }}</p>
+{% endfor %}
+
+<h1>List Movies {{visits}} times visited...</h1>
 <table>
     <tr><th>title</th><th>description</th><th>year</th><th>edit/delete</th><th>poster</th></tr>
 
@@ -30,6 +35,15 @@
         {% if movie_obj.img %}
         <img src="{{movie_obj.img.url}}" alt="{{movie_obj.title}}">
         {% endif %}
+    </td>
+    <td>
+        {{movie_obj.censor_details}}
+    </td>
+    <td>
+        {{movie_obj.directed_by}}
+    </td>
+    <td>
+        {{movie_obj.actors}}
     </td>
 
 </tr>
