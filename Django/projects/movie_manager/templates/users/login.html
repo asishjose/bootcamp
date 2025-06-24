@@ -1,12 +1,5 @@
 
-
-<h1>create</h1>
-
-{% extends 'blank_layout.html' %}
-
-{% block content %}
-
-<h1>Create User</h1>
+<h1>Login</h1>
 
 <form method="post", enctype="multipart/form-data">
     {% csrf_token %}
@@ -20,13 +13,13 @@
         <input type="password" name="password">
     </p>
 
-    <button type="submit">Signup</button>
-    <p>Already have an account? <a href="{% url 'login' %}">Log in here</a></p>
+    <button type="submit">Login</button>
+    <a href="{% url 'signup'%}">New User?</a>
 </form>
 
 <p>
     {% if user %}
-    <p>New User created with username {{user.username}}</p>
+    <p></p>
     {% endif %}
 </p>
 <p style="color: red;">
@@ -34,5 +27,3 @@
     Error occured: {{error_message}}
     {% endif %}
 </p>
-
-{% endblock %}
